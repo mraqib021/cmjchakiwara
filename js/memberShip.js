@@ -57,9 +57,11 @@ const MembersDataWork = (data) => {
 
   const Search_Normal_member = (e) => {
     let IntupVal = e.target.value.toUpperCase().split(" ").join("").split(".").join("");
-    if (IntupVal.length <= 0) {
+    console.log(e.key == "Backspace")
+    console.log(IntupVal.length <= 0 )
+    if (IntupVal.length <= 0 && e.key == "Backspace") {
       Data_render = data_in_paging;
-      console.log(Data_render)
+      // console.log(Data_render)
       page_no(Data_render.length, 4);
       Create_Members_list(Data_render);
     }
@@ -85,7 +87,6 @@ const MembersDataWork = (data) => {
     Data_Divider(dataSArray, Data_render);
     Create_Members_list(Data_render);
     page_no(Data_render.length, 1);
-    console.log(Data_render);
   };
 
   normal_memeber_search.addEventListener("input", Search_Normal_member);
