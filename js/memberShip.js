@@ -1,23 +1,12 @@
 //  Fetching Member Ship Card data Start
-let data_in_paging = [],
-  dataSArray = [],
-  ind = 3,
-  Data_render = [];
+let data_in_paging = [],dataSArray = [],ind = 3,Data_render = [];
 let page = 4;
 let totalPages;
-let Normal_members_container = document.querySelector(
-    ".Normal_members_container"
-  ),
-  Normal_member_card_container = Normal_members_container.querySelector(
-    ".Normal_member_card_container"
-  ),
-  normal_memeber_search = Normal_members_container.querySelector(
-    ".normal_memeber_search"
-  ),
+let Normal_members_container = document.querySelector(".Normal_members_container"),
+  Normal_member_card_container = Normal_members_container.querySelector(".Normal_member_card_container" ),
+  normal_memeber_search = Normal_members_container.querySelector(".normal_memeber_search"),
   Paging_box = Normal_members_container.querySelector(".Paging_box ul");
-Nor_memberShip_list_table = Normal_members_container.querySelector(
-  ".Nor_memberShip_list"
-);
+Nor_memberShip_list_table = Normal_members_container.querySelector(".Nor_memberShip_list");
 Nor_memberShip_list_table.innerHTML = `
                     <thead class="table-dark">
                       <tr>
@@ -32,9 +21,7 @@ Nor_memberShip_list_table.innerHTML = `
                     <tbody>
                     </tbody>
                 `;
-let Nor_memberShip_list = Nor_memberShip_list_table.querySelector(
-  ".Nor_memberShip_list tbody"
-);
+let Nor_memberShip_list = Nor_memberShip_list_table.querySelector(".Nor_memberShip_list tbody");
 normal_memeber_search.disabled = true;
 
 const FETCH_memberShipData = async () => {
@@ -161,9 +148,8 @@ function createPagination(totalPages, page) {
   let beforePage = page - 1;
   let afterPage = page + 1;
   if (page > 1) {
-    liTag += `<li class="btn prev"  onclick="paging_Previous_page(${totalPages}, ${
-      page - 1
-    })"><span><i class="fas fa-angle-left"></i> Prev</span></li>`;
+    liTag += `<li class="btn prev"  onclick="paging_Previous_page(${totalPages}, ${page - 1
+      })"><span><i class="fas fa-angle-left"></i> Prev</span></li>`;
   }
 
   if (page > 2) {
@@ -209,9 +195,8 @@ function createPagination(totalPages, page) {
   }
 
   if (page < totalPages) {
-    liTag += `<li class="btn next"  onclick="paging_next_page(${totalPages}, ${
-      page + 1
-    })"><span>Next <i class="fas fa-angle-right"></i></span></li>`;
+    liTag += `<li class="btn next"  onclick="paging_next_page(${totalPages}, ${page + 1
+      })"><span>Next <i class="fas fa-angle-right"></i></span></li>`;
   }
   Paging_box.innerHTML = liTag;
   return liTag;
