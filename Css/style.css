@@ -115,9 +115,9 @@ transition: 0.3s;
 .min_width_for_content {
   min-width: 250px;
 }
-.font-sm{
+/* .font-sm{
   font-size: 0.7rem;
-}
+} */
 
 @media (width < 900px) {
   body {
@@ -126,8 +126,15 @@ transition: 0.3s;
 }
 @media (width < 600px) {
   body {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
+}
+.Nor_memberShip_list::-webkit-scrollbar{
+  height: 0;
+  width: 0;
+}
+.Nor_memberShip_list{
+  overflow-x: scroll;
 }
 .custom_card_image {
   height: 200px;

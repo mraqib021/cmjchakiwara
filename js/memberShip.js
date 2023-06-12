@@ -56,14 +56,10 @@ const MembersDataWork = (data) => {
   Paging_box.innerHTML = createPagination(totalPages, page);
 
   const Search_Normal_member = (e) => {
-    let IntupVal = e.target.value
-      .toUpperCase()
-      .split(" ")
-      .join("")
-      .split(".")
-      .join("");
+    let IntupVal = e.target.value.toUpperCase().split(" ").join("").split(".").join("");
     if (IntupVal.length <= 0) {
       Data_render = data_in_paging;
+      page_no(Data_render.length, 4);
       Create_Members_list(Data_render);
     }
     Create_Members_list(Data_render);
