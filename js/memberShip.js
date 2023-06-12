@@ -1,9 +1,9 @@
 //  Fetching Member Ship Card data Start
-let data_in_paging = [],dataSArray = [],ind = 3,Data_render = [];
+let data_in_paging = [], dataSArray = [], ind = 3, Data_render = [];
 let page = 4;
 let totalPages;
 let Normal_members_container = document.querySelector(".Normal_members_container"),
-  Normal_member_card_container = Normal_members_container.querySelector(".Normal_member_card_container" ),
+  Normal_member_card_container = Normal_members_container.querySelector(".Normal_member_card_container"),
   normal_memeber_search = Normal_members_container.querySelector(".normal_memeber_search"),
   Paging_box = Normal_members_container.querySelector(".Paging_box ul");
 Nor_memberShip_list_table = Normal_members_container.querySelector(".Nor_memberShip_list");
@@ -59,6 +59,7 @@ const MembersDataWork = (data) => {
     let IntupVal = e.target.value.toUpperCase().split(" ").join("").split(".").join("");
     if (IntupVal.length <= 0) {
       Data_render = data_in_paging;
+      console.log(Data_render)
       page_no(Data_render.length, 4);
       Create_Members_list(Data_render);
     }
@@ -69,17 +70,8 @@ const MembersDataWork = (data) => {
     Nor_memberShip_list.innerHTML = "";
     for (let i = 0; i < data_in_paging.length; i++) {
       for (let j = 0; j < data_in_paging[i].length; j++) {
-        let person_name = data_in_paging[i][j].Name.toUpperCase()
-          .split(" ")
-          .join("")
-          .split(".")
-          .join("");
-        let person_sir_name = data_in_paging[i][j].sir_name
-          .toUpperCase()
-          .split(" ")
-          .join("")
-          .split(".")
-          .join("");
+        let person_name = data_in_paging[i][j].Name.toUpperCase().split(" ").join("").split(".").join("");
+        let person_sir_name = data_in_paging[i][j].sir_name.toUpperCase().split(" ").join("").split(".").join("");
         let person_ID = data_in_paging[i][j].Member_id.split(" ").join("");
         if (
           person_name.indexOf(IntupVal) >= 0 ||
@@ -96,7 +88,7 @@ const MembersDataWork = (data) => {
     console.log(Data_render);
   };
 
-  normal_memeber_search.addEventListener("change", Search_Normal_member);
+  normal_memeber_search.addEventListener("input", Search_Normal_member);
   normal_memeber_search.addEventListener("keyup", Search_Normal_member);
   normal_memeber_search.addEventListener("keypress", Search_Normal_member);
 };
