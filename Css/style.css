@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@200;300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+}
+.Normal_members_container input:disabled{
+  background: #fff !important;
+}
+:root {
+  --secondary-60: #fff;
+  --primary-color-30: #455974;
+  --members-card-color-p :#557aff;
+  --members-card-color-s :#ffffff;
+
+}
+.grayBG{
+  background: #f5f5f5;
+}
+.opacity0{
+  opacity: 0;
+  transition: 0.5s;
+}
+.opacity1{
+  opacity:1;
+  transition:  0.5s;
+}
+.Trasition03{
+transition: 0.3s;
+}
+/* body {
+  min-height: 100vh;
+  background: var(--bg-Color-60);
+} */
+
+.bg_primar {
+  background: var(--primary-color-30);
+}
+
+.bg_secondary {
+  background: var(--secondary-60);
+}
+
+.Our_Custom_btn {
+  background: transparent;
+  /* color: var(--primary-color-30); */
+  border: 1px solid var(--primary-color-30);
+  padding: 8px 15px;
+  border-radius: 2px;
+}
+.hide{
+  display: none !important;
+}
+.Our_Custom_btn:hover {
+  color: var(--secondary-60);
+  background: var(--primary-color-30);
+  border-radius: 3px;
+}
+.min_width_for_card{
+  min-width: 300px;
+}
+.object_fit_cover {
+  object-fit: cover;
+}
+
+/* .text_hover_effect:hover {} */
+
+.Nav_bar_reset_Toggle:focus {
+  box-shadow: none;
+}
+
+.min_height_100vh {
+  min-height: 100vh;
+}
+
+.height_100vh {
+  height: 100vh;
+}
+
+.max_width_1280 {
+  max-width: 1380px;
+}
+
+
+.bg-dark-color {
+  background: #1f1a1a;
+}
+
+.marker::marker {
+  content: "";
+  display: none;
+  font-size: 1rem;
+}
+
+.border-radius-10px {
+  border-radius: 10px 10px 10px 10px;
+}
+
+.outline_none {
+  outline: transparent;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.overflow_hidden {
+  overflow: hidden;
+}
+.min_width_for_content {
+  min-width: 250px;
+}
+.font-sm{
+  font-size: 0.7rem;
+}
+
+@media (width < 900px) {
+  body {
+    font-size: 0.8rem;
+  }
+}
+@media (width < 600px) {
+  body {
+    font-size: 0.5rem;
+  }
+}
+.custom_card_image {
+  height: 200px;
+  width: 200px;
+  object-fit: fill;
+  margin: 30px 0px;
+}
+
+.CMSF_card {
+  width: 300px;
+  aspect-ratio: 4/2.5;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 10px 10px 10px 0 #0000001f;
+  background: var(--members-card-color-p);
+}
+.custom-shape-divider-top-1685963510 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1685963510 svg {
+  position: relative;
+  display: block;
+  width: calc(158% + 1.3px);
+  height: 90px;
+}
+
+.custom-shape-divider-top-1685963510 .shape-fill {
+  fill: #fbfeff;
+}
+.CMSF_card .Profile_img {
+  border: 5px solid var(--members-card-color-s);
+  width: 50px;
+  aspect-ratio: 1;
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px -10px 10px 0 #0000001a, 0 0 5px 5px #0000001c;
+  top: 11%;
+  right: 13%;
+}
+.CMSF_card .Profile_img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.Person_details {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  font-weight: 300;
+  color: var(--members-card-color-s);
+  line-height: 1.54rem;
+}
+.Person_title {
+  position: absolute;
+  left: 0px;
+  top: 20px;
+  color: #fff;
+  background:var(--members-card-color-p);
+  padding: 2px 30px 2px 20px;
+  font-size: 0.9rem;
+}
+.Person_title:before{
+  content: "";
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: -10%;
+  height:100%;
+  transform: rotate(-45deg) ;
+  aspect-ratio: 1;
+  /* right: 0; */
+}
+input:focus{
+  outline: transparent;
+  border: none;
+  box-shadow: none !important;
+}
+.CMSF_card.Nor_member .Profile_img ,
+.CMSF_card.Nor_member .Person_title{
+  display: none;
+}
+
+/* <!-- pagination css --> */
+
+
+/* pagintion css end */
+
+

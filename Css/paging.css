@@ -1,0 +1,50 @@
+
+.Paging_box ul{
+  width: fit-content;
+  display: flex ;
+  flex-wrap: wrap ;
+  background: #fff;
+  padding: 5px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.055);
+}
+.Paging_box ul li{
+  color: #0061d0;
+  list-style: none;
+  line-height: 45px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+.Paging_box ul li.numb{
+  list-style: none;
+  height: 45px;
+  width: 45px;
+  margin: 0 3px;
+  /* line-height: 45px; */
+  border-radius: 50%;
+}
+.Paging_box ul li.numb.first{
+  margin: 0px 3px 0 -5px;
+}
+.Paging_box ul li.numb.last{
+  margin: 0px -5px 0 3px;
+}
+.Paging_box ul li.dots{
+  font-size: 22px;
+  cursor: default;
+}
+.Paging_box ul li.btn{
+  padding: 0 20px;
+  /* border-radius: 50px; */
+}
+.Paging_box li.active,
+.Paging_box ul li.numb:hover,
+.Paging_box ul li:first-child:hover,
+.Paging_box ul li:last-child:hover{
+  color: #fff;
+  background: #0061d0;
+}
+.meriClass{display: none;}
